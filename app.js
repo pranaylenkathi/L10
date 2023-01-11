@@ -40,7 +40,12 @@ app.get("/", async (request, response) => {
 });
 
 app.get("/signup", (request, response) => {
-  response.render("signup", { title: "Signup"})
+  response.render("signup", { title: "Signup", csrfToken: request.csrfToken()})
+})
+
+app.post("/user", (request, response) => {
+  console.log("Firstname", request.body.firstName)
+  // Have to create th user here
 })
 
 app.post("/todos", async (request, response) => {
