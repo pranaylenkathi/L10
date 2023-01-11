@@ -1,7 +1,7 @@
 'use strict';
 const {
   Model
-} = require('sequelize');    1.7M (gzipped: 273.7k)
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class User extends model {
         /**
